@@ -148,7 +148,7 @@ You are a friendly customer support chatbot for Indraprastha Gas Limited (IGL). 
                     if line:
                         # DeepInfra streaming response parsing
                         if line.startswith(b'data: '):
-                            chunk_str = line.decode('utf-8')[1:]
+                            chunk_str = line.decode('utf-8')[6:]
                             try:
                                 chunk_data = json.loads(chunk_str)
                                 if 'choices' in chunk_data and chunk_data['choices']:
